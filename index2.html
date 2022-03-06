@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width, initial-scale=1.0">
+    <title>Document</title>
+
+
+    <style>
+        body {
+            margin-top: 200px;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #050210;
+
+        }
+
+        .circle {
+            position: relative;
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+
+
+            background: linear-gradient(#fb5dad, #55fb9f, #b97aff);
+            animation-name: animation-1;
+            animation-duration: 1s;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+            animation-play-state: running;
+
+        }
+
+        @keyframes animation-1 {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        .circle span {
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            background: linear-gradient(#fb5dad, #55fb9f, #b97aff);
+
+        }
+
+        .circle span:nth-child(1) {
+            filter: blur(50px);
+
+        }
+
+        .circle span:nth-child(2) {
+            filter: blur(100px);
+
+        }
+
+        .circle::after {
+
+            content: "";
+            position: absolute;
+            display: flex;
+            top: 20px;
+            left: 20px;
+            right: 20px;
+            bottom: 20px;
+            border-radius: 50%;
+            background-color: #050210;
+
+            animation-name: animation-2;
+            animation-duration: 3s;
+            animation-iteration-count: infinite;
+            animation-direction: normal;
+            animation-timing-function: ease-out;
+            animation-play-state: running;
+
+            background: radial-gradient(#332955dc, #050210ef);
+            filter: blur(1px);
+
+        }
+
+        @keyframes animation-2 {
+            0% {
+
+                box-shadow: inset 0 0 0 0 #050210;
+            }
+
+            70% {
+
+                box-shadow: inset 0 0 0 150px #050210;
+
+            }
+
+
+            100% {
+
+                box-shadow: inset 0 0 0 0 #050210;
+
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="circle">
+        <span></span>
+        <span></span>
+        <span></span>
+       <span></span>
+    </div>
+    </div>
+
+
+
+</body>
+
+</html>
